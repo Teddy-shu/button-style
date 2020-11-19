@@ -1,0 +1,47 @@
+
+.border-button{
+  position: relative;
+  width: 300px;
+  height: 100px;
+  border: none;
+  left: 30%;
+  background: transparent;
+  overflow: hidden;
+}
+.border-button p{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 25px;
+  color: royalblue;
+}
+.border-button span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 96%;
+    height: 90%;
+    z-index: -1;
+    border: 5px solid royalblue;
+}
+.border-button span::before{
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  top: 50%;
+  left: 50%;
+  background: white;
+  transform: translate(-50%,-50%) rotate(-60deg);
+  transition: all .3s;
+}
+.border-button:hover span::before{
+  transform: translate(-50%,-50%) rotate(-90deg);
+    width: 100%;
+    background: royalblue;
+}
+
+.border-button:hover p{
+  color: white;
+}
