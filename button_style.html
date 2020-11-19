@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="https://kit.fontawesome.com/fd8f753056.js" crossorigin="anonymous"></script>
+  <title></title>
+  <link rel="stylesheet" href="css/bgtext.css">
+  <link rel="stylesheet" href="css/water_button.css">
+  <link rel="stylesheet" href="css/icon_button.css">
+  <link rel="stylesheet" href="css/buttomline_button.css">
+  <link rel="stylesheet" href="css/info_button.css">
+  <link rel="stylesheet" href="css/wave_button.css">
+  <link rel="stylesheet" href="css/isometric.css">
+  <link rel="stylesheet" href="css/border.css">
+  <link rel="stylesheet" href="css/switch.css">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+</head>
+
+<body>
+
+  <div class="container_text"><!--pic bg in text-->
+    <h1 class='skybg'>404</h1>
+  </div>
+
+  <div class="container"><!--hover style like waterfall-->
+    <button class="waterbtn btn1">hover me</button>
+    <button class="waterbtn btn2">hover me</button>
+  </div>
+
+  <div class="container"><!--hover style text become icon-->
+    <button class="iconbtn"></button>
+  </div>
+
+  <div class="container"><!--hover style familymart icon-->
+    <button id="btmlinebtn">Hover Me</button>
+  </div>
+
+  <div class="container"><!--hover style icon become text-->
+    <div class="contact-info">
+      <div class="card">
+        <i class="card-icon far fa-envelope"></i>
+        <p>email@domain.com</p>
+      </div>
+
+      <div class="card">
+        <i class="card-icon fas fa-phone"></i>
+        <p>0000000000</p>
+      </div>
+
+      <div class="card">
+        <i class="card-icon fas fa-map-marker-alt"></i>
+        <p>My Home, Taiwan</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="wave_btn">
+      <a href="#" id="waveBtn">Hover Me</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="Isometric">
+
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fa fa-facebook"></span>
+        </a>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="border-button">
+      <p>Hover Me</p>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="switch-button">
+      <input type="checkbox" name="">
+    </div>
+  </div>
+
+<!--give waveBtn animation when hover-->
+<script type="text/javascript">
+  var buttons = document.getElementById('waveBtn');
+  //console.log(buttons.text);
+  buttons.addEventListener('mouseenter', function(e){
+    let x = e.clientX -e.target.offsetLeft;
+    let y = e.clientY -this.getBoundingClientRect().top;
+
+    let ripples = document.createElement('span');
+    ripples.style.left = x + 'px';
+    ripples.style.top = y + 'px';
+    this.appendChild(ripples);
+
+    this.addEventListener('animationend', () => {
+      console.log('Animation ended');
+      ripples.remove();
+    });
+  });
+</script>
+
+</body>
